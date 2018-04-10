@@ -102,6 +102,7 @@
             this.textBoxInitialInvestment.Name = "textBoxInitialInvestment";
             this.textBoxInitialInvestment.Size = new System.Drawing.Size(106, 20);
             this.textBoxInitialInvestment.TabIndex = 2;
+            this.textBoxInitialInvestment.TextChanged += new System.EventHandler(this.textBoxInitialInvestment_TextChanged);
             // 
             // label1
             // 
@@ -111,6 +112,7 @@
             this.label1.Size = new System.Drawing.Size(86, 13);
             this.label1.TabIndex = 3;
             this.label1.Text = "Initial Investment";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // Label2
             // 
@@ -120,6 +122,7 @@
             this.Label2.Size = new System.Drawing.Size(103, 13);
             this.Label2.TabIndex = 3;
             this.Label2.Text = "Monthly Contribution";
+            this.Label2.Click += new System.EventHandler(this.Label2_Click);
             // 
             // textBoxMonthlyContribution
             // 
@@ -127,6 +130,7 @@
             this.textBoxMonthlyContribution.Name = "textBoxMonthlyContribution";
             this.textBoxMonthlyContribution.Size = new System.Drawing.Size(106, 20);
             this.textBoxMonthlyContribution.TabIndex = 2;
+            this.textBoxMonthlyContribution.TextChanged += new System.EventHandler(this.textBoxMonthlyContribution_TextChanged);
             // 
             // textBoxLengthOfTime
             // 
@@ -134,6 +138,7 @@
             this.textBoxLengthOfTime.Name = "textBoxLengthOfTime";
             this.textBoxLengthOfTime.Size = new System.Drawing.Size(106, 20);
             this.textBoxLengthOfTime.TabIndex = 2;
+            this.textBoxLengthOfTime.TextChanged += new System.EventHandler(this.textBoxLengthOfTime_TextChanged);
             // 
             // textBoxInterestRate
             // 
@@ -141,6 +146,7 @@
             this.textBoxInterestRate.Name = "textBoxInterestRate";
             this.textBoxInterestRate.Size = new System.Drawing.Size(106, 20);
             this.textBoxInterestRate.TabIndex = 2;
+            this.textBoxInterestRate.TextChanged += new System.EventHandler(this.textBoxInterestRate_TextChanged);
             // 
             // label3
             // 
@@ -150,6 +156,7 @@
             this.label3.Size = new System.Drawing.Size(118, 13);
             this.label3.TabIndex = 3;
             this.label3.Text = "Length of time (Months)";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
             // 
@@ -159,6 +166,7 @@
             this.label4.Size = new System.Drawing.Size(68, 13);
             this.label4.TabIndex = 3;
             this.label4.Text = "Interest Rate";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label5
             // 
@@ -209,6 +217,7 @@
             this.label6.Size = new System.Drawing.Size(70, 13);
             this.label6.TabIndex = 10;
             this.label6.Text = "Your Results:";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // radioButtonAnnual
             // 

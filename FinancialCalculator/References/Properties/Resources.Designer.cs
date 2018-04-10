@@ -63,6 +63,16 @@ namespace References.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap calculate_loan_costs_800x800 {
+            get {
+                object obj = ResourceManager.GetObject("calculate-loan-costs-800x800", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap compound_interest_formula_diagram {
             get {
                 object obj = ResourceManager.GetObject("compound-interest-formula-diagram", resourceCulture);

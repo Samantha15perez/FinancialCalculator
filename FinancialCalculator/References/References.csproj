@@ -82,5 +82,8 @@
   <ItemGroup>
     <None Include="compound-interest-formula-diagram.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="calculate-loan-costs-800x800.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

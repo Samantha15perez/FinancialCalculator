@@ -17,7 +17,7 @@ namespace FinancialCalculator
             InitializeComponent();
         }
 
-        int Compounded = 1;
+        
 
         private void fileToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -67,45 +67,64 @@ namespace FinancialCalculator
 
         private void radioButtonAnnual_CheckedChanged(object sender, EventArgs e)
         {
-            int Compounded = 1;
+            
         }
 
         private void radioButtonSemiannually_CheckedChanged(object sender, EventArgs e)
         {
-            int Compounded = 2;
+            
         }
 
         private void radioButtonMonthly_CheckedChanged(object sender, EventArgs e)
         {
-            int Compounded = 12;
+            
         }
 
         private void radioButtonDaily_CheckedChanged(object sender, EventArgs e)
         {
-            int Compounded = 365;
+            
         }
 
         private void buttonCalculate_Click(object sender, EventArgs e)
         {
            try
             {
-                
-                double Principal = Int32.Parse(textBoxInitialInvestment.Text);
-                double InterestRate = (Int32.Parse(textBoxInterestRate.Text)) / 10;
-                double Time = (Int32.Parse(textBoxLengthOfTime.Text)) / 12;
-                double MathExpAmt = (Compounded * Time);
-                double intComp = (InterestRate / Compounded);
-                double EqP1 = (Principal * (1 + intComp));
+                int Compounded = 0;
 
-                double Amount = Math.Pow(EqP1, MathExpAmt);
+                if (radioButtonDaily.Checked)
+                {
+                    Compounded = 365;
+                }
+                else if (radioButtonMonthly.Checked)
+                {
+                    Compounded = 12;
+                }
+                else if (radioButtonSemiannually.Checked)
+                {
+                    Compounded = 2;
+                }
+                else if (radioButtonAnnual.Checked)
+                {
+                    Compounded = 1;
+                }
 
-               
+                double Principal = double.Parse(textBoxInitialInvestment.Text);
+                double InterestRate = (double.Parse(textBoxInterestRate.Text)) / 100;
+                double Time = (double.Parse(textBoxLengthOfTime.Text)) / 12;
+                double Contribution = double.Parse(textBoxMonthlyContribution.Text) * 12;
+                                
+                double Amount = Math.Pow(Principal * (1 + (InterestRate / Compounded)), (Compounded * Time));
+                double FINAL = (Amount + Contribution);
 
-                ResultLabel.Text = Amount.ToString();
+
+
+
+                ResultLabel.Text = FINAL.ToString();
             }
-            catch
+            catch 
             {
-                MessageBox.Show("Numbers Only Please!");
+                MessageBox.Show("Something went wrong.");
+                
             }
         }
 
@@ -115,6 +134,51 @@ namespace FinancialCalculator
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxInterestRate_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxLengthOfTime_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxMonthlyContribution_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxInitialInvestment_TextChanged(object sender, EventArgs e)
         {
 
         }

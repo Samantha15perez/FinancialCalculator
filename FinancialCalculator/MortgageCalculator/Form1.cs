@@ -31,5 +31,77 @@ namespace MortgageCalculator
         {
 
         }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonReset_Click(object sender, EventArgs e)
+        {
+            textBoxMortgagePrinciple.Text = "";            
+            textBoxNumberOfMonths.Text = "";
+            textBoxMonthlyInterest.Text = "";
+            ResultLabel.Text = "";
+        }
+
+        private void buttonCalculate_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string MonthlyPayment = "13";
+
+                ResultLabel.Text = MonthlyPayment.ToString();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        private void ResultLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+       
+        private void textBoxLengthOfTime_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxMonthlyContribution_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxInitialInvestment_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
