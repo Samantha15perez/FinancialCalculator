@@ -139,22 +139,24 @@ namespace FinancialCalculator
               
 
                 double FV = (EQSide1 + EQSide2);
-                double YA = ((FV - P) / n);
-                double IE = (((i * P) * 12) * n);
-                
-               
+                // double YA = ((FV - P) / n);
+                // double IE = (((i * P) * 12) * n);
 
-
-
-
+                double IE = ((i * P) * n);
+                double YA = (r * 12);
                 
 
 
 
 
-                ResultLabel.Text = FV.ToString();
-                label7.Text = IE.ToString();
-                label9.Text = YA.ToString();
+                
+
+
+
+
+                ResultLabel.Text = FV.ToString("c");
+                label7.Text = IE.ToString("c");
+                label9.Text = YA.ToString("c");
             }
             catch 
             {
@@ -163,10 +165,7 @@ namespace FinancialCalculator
             }
         }
 
-        private void ResultLabel_Click(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void groupBox1_Enter(object sender, EventArgs e)
         {

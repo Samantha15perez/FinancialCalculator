@@ -79,5 +79,15 @@ namespace References.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Wikihow_Mortgage_formula {
+            get {
+                object obj = ResourceManager.GetObject("Wikihow Mortgage formula", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

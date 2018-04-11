@@ -117,4 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="desc1.Text" xml:space="preserve">
+    <value>TheCalculatorSite.Com has a very detailed explanation on what compound interest is and how it functions. Investor.Gov may not explain how the math works, but it can be used to double check the math that's involved.  </value>
+  </data>
 </root>

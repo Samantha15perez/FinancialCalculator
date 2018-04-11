@@ -62,28 +62,25 @@ namespace MortgageCalculator
                 }
 
                 
-                // broken cause the math is wrong
-                double MP = double.Parse(textBoxMortgagePrinciple.Text);
-                //this takes the down payment off of the initial amount
-                double LoanBase = MP - DP;
-                //this turns the interest into a percentage
-                double Interest = (double.Parse(textBoxMonthlyInterest.Text) / 100);
-                double ProgramLength = double.Parse(textBoxNumberOfMonths.Text);
-                /*
-                double TotalInterest = (LoanBase * Interest);
-                double PayWOInterest = (LoanBase / ProgramLength);
-                double MonthlyPayment = (PayWOInterest / 12) + TotalInterest; */
+                
+                                                          
+                double Interest = ((double.Parse(textBoxMonthlyInterest.Text) / 100) / 12);//this turns the interest into a percentage
+                double ProgramLength = double.Parse(textBoxNumberOfMonths.Text); // how many years the program lasts
+                double P = double.Parse(textBoxMortgagePrinciple.Text); //how much you have to pay
+                double n = (ProgramLength * 12); //number of payments
+                double M = (P - DP);
 
-                double Ip1 = Interest + 1;
-                double Months = (ProgramLength * 12);
-                double Exp = Math.Pow(Ip1, Months);
-                double Expp1 = (Exp * Interest);
-                double Expp1m1 = (Expp1 - 1);
-                double Fraction = (Expp1 / Expp1m1);
-                double FullEquation = (Fraction * MP);
+                double R1 = (Interest + 1);
+                double R1n = Math.Pow(R1, n);
+                double Numerator = (Interest * R1n);
+                double Denominator = (R1n - 1);
+                double Fraction = (Numerator / Denominator);
+                double FullEquation = (M * Fraction);
+
+                
 
 
-                ResultLabel.Text = FullEquation.ToString();
+                ResultLabel.Text = FullEquation.ToString("c");
             }
             catch (Exception ex)
             {

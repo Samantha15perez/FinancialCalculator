@@ -192,7 +192,7 @@
             this.ResultLabel.Size = new System.Drawing.Size(108, 20);
             this.ResultLabel.TabIndex = 8;
             this.ResultLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.ResultLabel.Click += new System.EventHandler(this.ResultLabel_Click);
+            
             // 
             // buttonCalculate
             // 
@@ -308,7 +308,7 @@
             this.label7.Size = new System.Drawing.Size(108, 20);
             this.label7.TabIndex = 8;
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label7.Click += new System.EventHandler(this.ResultLabel_Click);
+            
             // 
             // label8
             // 
@@ -330,7 +330,7 @@
             this.label9.Size = new System.Drawing.Size(108, 20);
             this.label9.TabIndex = 8;
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label9.Click += new System.EventHandler(this.ResultLabel_Click);
+            
             // 
             // label10
             // 
