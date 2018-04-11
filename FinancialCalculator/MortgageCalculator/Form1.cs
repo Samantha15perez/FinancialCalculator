@@ -47,11 +47,43 @@ namespace MortgageCalculator
 
         private void buttonCalculate_Click(object sender, EventArgs e)
         {
-            try
-            {
-                string MonthlyPayment = "13";
 
-                ResultLabel.Text = MonthlyPayment.ToString();
+            double DP = 0;
+            
+            try
+            { //if the checkbox is checked, the number is treated as a percentage. if not, it's treated as it's literal value.
+                if (checkBoxPercentage.Checked)
+                {
+                    DP = ((double.Parse(textBoxMortgagePrinciple.Text)) / 100) * double.Parse(textBoxDownPayment.Text);
+                }
+                else
+                {
+                    DP = double.Parse(textBoxDownPayment.Text);
+                }
+
+                
+                // broken cause the math is wrong
+                double MP = double.Parse(textBoxMortgagePrinciple.Text);
+                //this takes the down payment off of the initial amount
+                double LoanBase = MP - DP;
+                //this turns the interest into a percentage
+                double Interest = (double.Parse(textBoxMonthlyInterest.Text) / 100);
+                double ProgramLength = double.Parse(textBoxNumberOfMonths.Text);
+                /*
+                double TotalInterest = (LoanBase * Interest);
+                double PayWOInterest = (LoanBase / ProgramLength);
+                double MonthlyPayment = (PayWOInterest / 12) + TotalInterest; */
+
+                double Ip1 = Interest + 1;
+                double Months = (ProgramLength * 12);
+                double Exp = Math.Pow(Ip1, Months);
+                double Expp1 = (Exp * Interest);
+                double Expp1m1 = (Expp1 - 1);
+                double Fraction = (Expp1 / Expp1m1);
+                double FullEquation = (Fraction * MP);
+
+
+                ResultLabel.Text = FullEquation.ToString();
             }
             catch (Exception ex)
             {
@@ -100,6 +132,16 @@ namespace MortgageCalculator
         }
 
         private void textBoxInitialInvestment_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBoxPercentage_CheckedChanged(object sender, EventArgs e)
         {
 
         }

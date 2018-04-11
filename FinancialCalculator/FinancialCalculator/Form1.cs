@@ -62,6 +62,8 @@ namespace FinancialCalculator
             textBoxLengthOfTime.Text = "";
             textBoxMonthlyContribution.Text = "";
             ResultLabel.Text = "";
+            label7.Text = "";
+            label9.Text = "";
 
         }
 
@@ -89,37 +91,70 @@ namespace FinancialCalculator
         {
            try
             {
-                int Compounded = 0;
-
+                //conditional variables are declared here to make the if statements function properly
+                double c = 0;
+                double r = double.Parse(textBoxMonthlyContribution.Text);
+                double R = 0;
+                //certain variables are different depending on what button is selected
                 if (radioButtonDaily.Checked)
                 {
-                    Compounded = 365;
+                    c = 365; R = ((r * 12) / 365);
+                    
                 }
                 else if (radioButtonMonthly.Checked)
                 {
-                    Compounded = 12;
+                    c = 12; R = r;
+                    
+                }
+                else if (radioButtonQuarterly.Checked)
+                {
+                    c = 4; R = (r * 3);
                 }
                 else if (radioButtonSemiannually.Checked)
                 {
-                    Compounded = 2;
+                    c = 2; R = (r * 6);
+                    
                 }
                 else if (radioButtonAnnual.Checked)
                 {
-                    Compounded = 1;
-                }
+                    c = 1; R = (r * 12);
+                    
+                }                        
 
-                double Principal = double.Parse(textBoxInitialInvestment.Text);
-                double InterestRate = (double.Parse(textBoxInterestRate.Text)) / 100;
-                double Time = (double.Parse(textBoxLengthOfTime.Text)) / 12;
-                double Contribution = double.Parse(textBoxMonthlyContribution.Text) * 12;
-                                
-                double Amount = Math.Pow(Principal * (1 + (InterestRate / Compounded)), (Compounded * Time));
-                double FINAL = (Amount + Contribution);
+                double P = double.Parse(textBoxInitialInvestment.Text);
+                double i = (double.Parse(textBoxInterestRate.Text)) / 100;                
+                double n = double.Parse(textBoxLengthOfTime.Text);
+
+                
+
+                
+                double NxC = (n * c);
+                double IdC = (i / c);
+                double IdC1 = (1 + IdC);
+                double EQP1 = Math.Pow(IdC1, NxC);
+                double EQSide1 = (P * EQP1);
+                double EQP2 = (EQP1 - 1);
+                double EQP3 = (R * EQP2);
+                double EQSide2 = (EQP3 / IdC);
+              
+
+                double FV = (EQSide1 + EQSide2);
+                double YA = ((FV - P) / n);
+                double IE = (((i * P) * 12) * n);
+                
+               
 
 
 
 
-                ResultLabel.Text = FINAL.ToString();
+                
+
+
+
+
+                ResultLabel.Text = FV.ToString();
+                label7.Text = IE.ToString();
+                label9.Text = YA.ToString();
             }
             catch 
             {
@@ -179,6 +214,16 @@ namespace FinancialCalculator
         }
 
         private void textBoxInitialInvestment_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButtonQuarterly_CheckedChanged(object sender, EventArgs e)
         {
 
         }

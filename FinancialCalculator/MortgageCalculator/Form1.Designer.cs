@@ -43,6 +43,9 @@
             this.textBoxNumberOfMonths = new System.Windows.Forms.TextBox();
             this.textBoxMonthlyInterest = new System.Windows.Forms.TextBox();
             this.textBoxMortgagePrinciple = new System.Windows.Forms.TextBox();
+            this.textBoxDownPayment = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.checkBoxPercentage = new System.Windows.Forms.CheckBox();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -60,8 +63,8 @@
             // 
             this.optionsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.compoundInterestToolStripMenuItem,
-            this.exitToolStripMenuItem,
-            this.referencesToolStripMenuItem});
+            this.referencesToolStripMenuItem,
+            this.exitToolStripMenuItem});
             this.optionsToolStripMenuItem.Name = "optionsToolStripMenuItem";
             this.optionsToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
             this.optionsToolStripMenuItem.Text = "Options";
@@ -69,21 +72,21 @@
             // compoundInterestToolStripMenuItem
             // 
             this.compoundInterestToolStripMenuItem.Name = "compoundInterestToolStripMenuItem";
-            this.compoundInterestToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
+            this.compoundInterestToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.compoundInterestToolStripMenuItem.Text = "Compound Interest";
             this.compoundInterestToolStripMenuItem.Click += new System.EventHandler(this.compoundInterestToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // referencesToolStripMenuItem
             // 
             this.referencesToolStripMenuItem.Name = "referencesToolStripMenuItem";
-            this.referencesToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
+            this.referencesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.referencesToolStripMenuItem.Text = "References";
             this.referencesToolStripMenuItem.Click += new System.EventHandler(this.referencesToolStripMenuItem_Click);
             // 
@@ -132,27 +135,27 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(9, 121);
+            this.label3.Location = new System.Drawing.Point(9, 177);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(94, 13);
+            this.label3.Size = new System.Drawing.Size(82, 13);
             this.label3.TabIndex = 16;
-            this.label3.Text = "Number of Months";
+            this.label3.Text = "Program Length";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // Label2
             // 
             this.Label2.AutoSize = true;
-            this.Label2.Location = new System.Drawing.Point(12, 81);
+            this.Label2.Location = new System.Drawing.Point(12, 137);
             this.Label2.Name = "Label2";
-            this.Label2.Size = new System.Drawing.Size(82, 13);
+            this.Label2.Size = new System.Drawing.Size(85, 13);
             this.Label2.TabIndex = 17;
-            this.Label2.Text = "Monthly Interest";
+            this.Label2.Text = "Interest Rate (%)";
             this.Label2.Click += new System.EventHandler(this.Label2_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 41);
+            this.label1.Location = new System.Drawing.Point(12, 28);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(95, 13);
             this.label1.TabIndex = 18;
@@ -161,7 +164,7 @@
             // 
             // textBoxNumberOfMonths
             // 
-            this.textBoxNumberOfMonths.Location = new System.Drawing.Point(12, 137);
+            this.textBoxNumberOfMonths.Location = new System.Drawing.Point(12, 193);
             this.textBoxNumberOfMonths.Name = "textBoxNumberOfMonths";
             this.textBoxNumberOfMonths.Size = new System.Drawing.Size(106, 20);
             this.textBoxNumberOfMonths.TabIndex = 12;
@@ -169,7 +172,7 @@
             // 
             // textBoxMonthlyInterest
             // 
-            this.textBoxMonthlyInterest.Location = new System.Drawing.Point(12, 97);
+            this.textBoxMonthlyInterest.Location = new System.Drawing.Point(12, 153);
             this.textBoxMonthlyInterest.Name = "textBoxMonthlyInterest";
             this.textBoxMonthlyInterest.Size = new System.Drawing.Size(106, 20);
             this.textBoxMonthlyInterest.TabIndex = 13;
@@ -177,31 +180,64 @@
             // 
             // textBoxMortgagePrinciple
             // 
-            this.textBoxMortgagePrinciple.Location = new System.Drawing.Point(12, 57);
+            this.textBoxMortgagePrinciple.Location = new System.Drawing.Point(12, 44);
             this.textBoxMortgagePrinciple.Name = "textBoxMortgagePrinciple";
             this.textBoxMortgagePrinciple.Size = new System.Drawing.Size(106, 20);
             this.textBoxMortgagePrinciple.TabIndex = 14;
             this.textBoxMortgagePrinciple.TextChanged += new System.EventHandler(this.textBoxInitialInvestment_TextChanged);
             // 
+            // textBoxDownPayment
+            // 
+            this.textBoxDownPayment.Location = new System.Drawing.Point(12, 85);
+            this.textBoxDownPayment.Name = "textBoxDownPayment";
+            this.textBoxDownPayment.Size = new System.Drawing.Size(106, 20);
+            this.textBoxDownPayment.TabIndex = 14;
+            this.textBoxDownPayment.TextChanged += new System.EventHandler(this.textBoxInitialInvestment_TextChanged);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(12, 69);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(79, 13);
+            this.label4.TabIndex = 18;
+            this.label4.Text = "Down Payment";
+            this.label4.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // checkBoxPercentage
+            // 
+            this.checkBoxPercentage.AutoSize = true;
+            this.checkBoxPercentage.Location = new System.Drawing.Point(31, 111);
+            this.checkBoxPercentage.Name = "checkBoxPercentage";
+            this.checkBoxPercentage.Size = new System.Drawing.Size(63, 17);
+            this.checkBoxPercentage.TabIndex = 24;
+            this.checkBoxPercentage.Text = "Percent";
+            this.checkBoxPercentage.UseVisualStyleBackColor = true;
+            this.checkBoxPercentage.CheckedChanged += new System.EventHandler(this.checkBoxPercentage_CheckedChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(353, 186);
+            this.ClientSize = new System.Drawing.Size(353, 225);
+            this.Controls.Add(this.checkBoxPercentage);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.buttonReset);
             this.Controls.Add(this.buttonCalculate);
             this.Controls.Add(this.ResultLabel);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.Label2);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBoxNumberOfMonths);
+            this.Controls.Add(this.textBoxDownPayment);
             this.Controls.Add(this.textBoxMonthlyInterest);
             this.Controls.Add(this.textBoxMortgagePrinciple);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "Mortgage Calculator";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -226,6 +262,9 @@
         private System.Windows.Forms.TextBox textBoxNumberOfMonths;
         private System.Windows.Forms.TextBox textBoxMonthlyInterest;
         private System.Windows.Forms.TextBox textBoxMortgagePrinciple;
+        private System.Windows.Forms.TextBox textBoxDownPayment;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.CheckBox checkBoxPercentage;
     }
 }
 
