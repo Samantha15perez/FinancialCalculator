@@ -8,38 +8,33 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace MortgageCalculator
+namespace FinancialCalculator
 {
-    public partial class Form1 : Form
+    public partial class MortgageCalculator2 : Form
     {
-        public Form1()
+        public MortgageCalculator2()
         {
             InitializeComponent();
         }
 
-        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void compoundInterestToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void referencesToolStripMenuItem_Click(object sender, EventArgs e)
+        private void MortgageCalculator2_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void groupBox1_Enter(object sender, EventArgs e)
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
         {
 
         }
 
         private void buttonReset_Click(object sender, EventArgs e)
         {
-            textBoxMortgagePrinciple.Text = "";            
+            textBoxMortgagePrinciple.Text = "";
             textBoxNumberOfMonths.Text = "";
             textBoxMonthlyInterest.Text = "";
             ResultLabel.Text = "";
@@ -47,6 +42,7 @@ namespace MortgageCalculator
 
         private void buttonCalculate_Click(object sender, EventArgs e)
         {
+
 
             double DP = 0;
 
@@ -64,24 +60,20 @@ namespace MortgageCalculator
 
 
 
-
+                
                 double Interest = ((double.Parse(textBoxMonthlyInterest.Text) / 100) / 12);//this turns the interest into a percentage
                 double ProgramLength = double.Parse(textBoxNumberOfMonths.Text); // how many years the program lasts
                 double P = double.Parse(textBoxMortgagePrinciple.Text); //how much you have to pay
                 double n = (ProgramLength * 12); //number of payments
                 double M = (P - DP);
+                
 
-                double R1 = (Interest + 1);
-                double R1n = Math.Pow(R1, n);
-                double Numerator = (Interest * R1n);
-                double Denominator = (R1n - 1);
-                double Fraction = (Numerator / Denominator);
-                double FullEquation = (M * Fraction);
+                double FullEquationMonthlyPayment = CompoundInterestCalculator.MortgageMonthly(Interest, ProgramLength, P, DP);
+                double FullEquationTotalPaid = CompoundInterestCalculator.MortgageTotalPaid(Interest, ProgramLength, P, DP);
 
 
-
-
-                ResultLabel.Text = FullEquation.ToString("c");
+                ResultLabel.Text = FullEquationMonthlyPayment.ToString("c");
+                labelTotalPaid.Text = FullEquationTotalPaid.ToString("c");
             }
             catch (Exception ex)
             {
@@ -90,16 +82,6 @@ namespace MortgageCalculator
         }
 
         private void ResultLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
         {
 
         }
@@ -114,32 +96,32 @@ namespace MortgageCalculator
 
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-       
-        private void textBoxLengthOfTime_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBoxMonthlyContribution_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBoxInitialInvestment_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
+        private void label4_Click(object sender, EventArgs e)
         {
 
         }
 
         private void checkBoxPercentage_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxNumberOfMonths_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxDownPayment_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxMonthlyInterest_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxMortgagePrinciple_TextChanged(object sender, EventArgs e)
         {
 
         }

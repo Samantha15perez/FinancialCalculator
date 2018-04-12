@@ -31,8 +31,8 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.calculatorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.exitToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.referencesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exitToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.textBoxInitialInvestment = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.Label2 = new System.Windows.Forms.Label();
@@ -83,23 +83,23 @@
             // exitToolStripMenuItem2
             // 
             this.exitToolStripMenuItem2.Name = "exitToolStripMenuItem2";
-            this.exitToolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
+            this.exitToolStripMenuItem2.Size = new System.Drawing.Size(171, 22);
             this.exitToolStripMenuItem2.Text = "Mortgage Calculator";
             this.exitToolStripMenuItem2.Click += new System.EventHandler(this.exitToolStripMenuItem2_Click);
-            // 
-            // exitToolStripMenuItem3
-            // 
-            this.exitToolStripMenuItem3.Name = "exitToolStripMenuItem3";
-            this.exitToolStripMenuItem3.Size = new System.Drawing.Size(180, 22);
-            this.exitToolStripMenuItem3.Text = "Exit";
-            this.exitToolStripMenuItem3.Click += new System.EventHandler(this.exitToolStripMenuItem3_Click);
             // 
             // referencesToolStripMenuItem
             // 
             this.referencesToolStripMenuItem.Name = "referencesToolStripMenuItem";
-            this.referencesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.referencesToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
             this.referencesToolStripMenuItem.Text = "References";
             this.referencesToolStripMenuItem.Click += new System.EventHandler(this.referencesToolStripMenuItem_Click);
+            // 
+            // exitToolStripMenuItem3
+            // 
+            this.exitToolStripMenuItem3.Name = "exitToolStripMenuItem3";
+            this.exitToolStripMenuItem3.Size = new System.Drawing.Size(171, 22);
+            this.exitToolStripMenuItem3.Text = "Exit";
+            this.exitToolStripMenuItem3.Click += new System.EventHandler(this.exitToolStripMenuItem3_Click);
             // 
             // textBoxInitialInvestment
             // 
@@ -107,7 +107,6 @@
             this.textBoxInitialInvestment.Name = "textBoxInitialInvestment";
             this.textBoxInitialInvestment.Size = new System.Drawing.Size(106, 20);
             this.textBoxInitialInvestment.TabIndex = 2;
-            this.textBoxInitialInvestment.TextChanged += new System.EventHandler(this.textBoxInitialInvestment_TextChanged);
             // 
             // label1
             // 
@@ -117,7 +116,6 @@
             this.label1.Size = new System.Drawing.Size(70, 13);
             this.label1.TabIndex = 3;
             this.label1.Text = "Initial Amount";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // Label2
             // 
@@ -127,7 +125,6 @@
             this.Label2.Size = new System.Drawing.Size(103, 13);
             this.Label2.TabIndex = 3;
             this.Label2.Text = "Monthly Contribution";
-            this.Label2.Click += new System.EventHandler(this.Label2_Click);
             // 
             // textBoxMonthlyContribution
             // 
@@ -135,7 +132,6 @@
             this.textBoxMonthlyContribution.Name = "textBoxMonthlyContribution";
             this.textBoxMonthlyContribution.Size = new System.Drawing.Size(106, 20);
             this.textBoxMonthlyContribution.TabIndex = 2;
-            this.textBoxMonthlyContribution.TextChanged += new System.EventHandler(this.textBoxMonthlyContribution_TextChanged);
             // 
             // textBoxLengthOfTime
             // 
@@ -143,7 +139,6 @@
             this.textBoxLengthOfTime.Name = "textBoxLengthOfTime";
             this.textBoxLengthOfTime.Size = new System.Drawing.Size(106, 20);
             this.textBoxLengthOfTime.TabIndex = 2;
-            this.textBoxLengthOfTime.TextChanged += new System.EventHandler(this.textBoxLengthOfTime_TextChanged);
             // 
             // textBoxInterestRate
             // 
@@ -151,7 +146,6 @@
             this.textBoxInterestRate.Name = "textBoxInterestRate";
             this.textBoxInterestRate.Size = new System.Drawing.Size(106, 20);
             this.textBoxInterestRate.TabIndex = 2;
-            this.textBoxInterestRate.TextChanged += new System.EventHandler(this.textBoxInterestRate_TextChanged);
             // 
             // label3
             // 
@@ -161,7 +155,6 @@
             this.label3.Size = new System.Drawing.Size(110, 13);
             this.label3.TabIndex = 3;
             this.label3.Text = "Length of time (Years)";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
             // 
@@ -171,7 +164,6 @@
             this.label4.Size = new System.Drawing.Size(85, 13);
             this.label4.TabIndex = 3;
             this.label4.Text = "Interest Rate (%)";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label5
             // 
@@ -192,7 +184,6 @@
             this.ResultLabel.Size = new System.Drawing.Size(108, 20);
             this.ResultLabel.TabIndex = 8;
             this.ResultLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            
             // 
             // buttonCalculate
             // 
@@ -222,7 +213,6 @@
             this.label6.Size = new System.Drawing.Size(67, 13);
             this.label6.TabIndex = 10;
             this.label6.Text = "Future Value";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // radioButtonAnnual
             // 
@@ -234,7 +224,6 @@
             this.radioButtonAnnual.TabStop = true;
             this.radioButtonAnnual.Text = "Annually";
             this.radioButtonAnnual.UseVisualStyleBackColor = true;
-            this.radioButtonAnnual.CheckedChanged += new System.EventHandler(this.radioButtonAnnual_CheckedChanged);
             // 
             // radioButtonSemiannually
             // 
@@ -246,7 +235,6 @@
             this.radioButtonSemiannually.TabStop = true;
             this.radioButtonSemiannually.Text = "Semiannually";
             this.radioButtonSemiannually.UseVisualStyleBackColor = true;
-            this.radioButtonSemiannually.CheckedChanged += new System.EventHandler(this.radioButtonSemiannually_CheckedChanged);
             // 
             // radioButtonDaily
             // 
@@ -269,7 +257,6 @@
             this.radioButtonMonthly.TabStop = true;
             this.radioButtonMonthly.Text = "Monthly";
             this.radioButtonMonthly.UseVisualStyleBackColor = true;
-            this.radioButtonMonthly.CheckedChanged += new System.EventHandler(this.radioButtonMonthly_CheckedChanged);
             // 
             // groupBox1
             // 
@@ -284,7 +271,6 @@
             this.groupBox1.Size = new System.Drawing.Size(105, 133);
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // radioButtonQuarterly
             // 
@@ -296,7 +282,6 @@
             this.radioButtonQuarterly.TabStop = true;
             this.radioButtonQuarterly.Text = "Quarterly";
             this.radioButtonQuarterly.UseVisualStyleBackColor = true;
-            this.radioButtonQuarterly.CheckedChanged += new System.EventHandler(this.radioButtonQuarterly_CheckedChanged);
             // 
             // label7
             // 
@@ -308,7 +293,6 @@
             this.label7.Size = new System.Drawing.Size(108, 20);
             this.label7.TabIndex = 8;
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            
             // 
             // label8
             // 
@@ -318,7 +302,6 @@
             this.label8.Size = new System.Drawing.Size(79, 13);
             this.label8.TabIndex = 10;
             this.label8.Text = "Interest Earned";
-            this.label8.Click += new System.EventHandler(this.label6_Click);
             // 
             // label9
             // 
@@ -330,7 +313,6 @@
             this.label9.Size = new System.Drawing.Size(108, 20);
             this.label9.TabIndex = 8;
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            
             // 
             // label10
             // 
@@ -340,7 +322,6 @@
             this.label10.Size = new System.Drawing.Size(82, 13);
             this.label10.TabIndex = 10;
             this.label10.Text = "Yearly Additions";
-            this.label10.Click += new System.EventHandler(this.label6_Click);
             // 
             // Form1
             // 

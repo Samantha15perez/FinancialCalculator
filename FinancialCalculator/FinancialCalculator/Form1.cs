@@ -16,27 +16,10 @@ namespace FinancialCalculator
         {
             InitializeComponent();
         }
-
-        
-
-        private void fileToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void exitToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void mortgageCalculatorToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-           
-        }
-
+             
         private void exitToolStripMenuItem2_Click(object sender, EventArgs e)
         {
-            MortgageCalculator.Form1 form1 = new MortgageCalculator.Form1();
+            FinancialCalculator.MortgageCalculator2 form1 = new FinancialCalculator.MortgageCalculator2();
             //this allows the user to go between the two calculators
             form1.Show();
             
@@ -67,26 +50,6 @@ namespace FinancialCalculator
 
         }
 
-        private void radioButtonAnnual_CheckedChanged(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void radioButtonSemiannually_CheckedChanged(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void radioButtonMonthly_CheckedChanged(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void radioButtonDaily_CheckedChanged(object sender, EventArgs e)
-        {
-            
-        }
-
         private void buttonCalculate_Click(object sender, EventArgs e)
         {
            try
@@ -95,134 +58,64 @@ namespace FinancialCalculator
                 double c = 0;
                 double r = double.Parse(textBoxMonthlyContribution.Text);
                 double R = 0;
-                //certain variables are different depending on what button is selected
+                //Each radio button changes the value of the variables needed.
+                //c is how many times a year you would compound
+                //R is how many months are within the period you specify for compounding. 
                 if (radioButtonDaily.Checked)
                 {
-                    c = 365; R = ((r * 12) / 365);
+                    c = 365; 
                     
                 }
                 else if (radioButtonMonthly.Checked)
                 {
-                    c = 12; R = r;
+                    c = 12;
                     
                 }
                 else if (radioButtonQuarterly.Checked)
                 {
-                    c = 4; R = (r * 3);
+                    c = 4; 
                 }
                 else if (radioButtonSemiannually.Checked)
                 {
-                    c = 2; R = (r * 6);
+                    c = 2; 
                     
                 }
                 else if (radioButtonAnnual.Checked)
                 {
-                    c = 1; R = (r * 12);
+                    c = 1; 
                     
                 }                        
-
+            //these simple variables are the input for Principle, interest, and time. 
+            //interest is divided by 100 in order to convert the percentage to a decimal. 
                 double P = double.Parse(textBoxInitialInvestment.Text);
                 double i = (double.Parse(textBoxInterestRate.Text)) / 100;                
                 double n = double.Parse(textBoxLengthOfTime.Text);
 
-                
 
-                
-                double NxC = (n * c);
-                double IdC = (i / c);
-                double IdC1 = (1 + IdC);
-                double EQP1 = Math.Pow(IdC1, NxC);
-                double EQSide1 = (P * EQP1);
-                double EQP2 = (EQP1 - 1);
-                double EQP3 = (R * EQP2);
-                double EQSide2 = (EQP3 / IdC);
-              
 
-                double FV = (EQSide1 + EQSide2);
-                // double YA = ((FV - P) / n);
-                // double IE = (((i * P) * 12) * n);
-
-                double IE = ((i * P) * n);
-                double YA = (r * 12);
-                
+                double convertedFV = CompoundInterestCalculator.CompoundInterestFV(P, i, n, c, r);
+                double convertedIE = CompoundInterestCalculator.CompoundInterestIE(P, i, n, c, r);
+                double convertedYA = CompoundInterestCalculator.CompoundInterestYA(P, i, n, c, r);
 
 
 
 
-                
 
 
+                //this outputs all values to the proper labels, as money. 
 
-
-                ResultLabel.Text = FV.ToString("c");
-                label7.Text = IE.ToString("c");
-                label9.Text = YA.ToString("c");
+                ResultLabel.Text = convertedFV.ToString("c");
+                label7.Text = convertedIE.ToString("c");
+                label9.Text = convertedYA.ToString("c");
             }
-            catch 
+            catch (Exception ex)
             {
-                MessageBox.Show("Something went wrong.");
+                throw(ex);
                 
             }
-        }
-
-       
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBoxInterestRate_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBoxLengthOfTime_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBoxMonthlyContribution_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBoxInitialInvestment_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void radioButtonQuarterly_CheckedChanged(object sender, EventArgs e)
         {
 
         }
