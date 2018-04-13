@@ -47,6 +47,7 @@
             this.calculatorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.referencesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.labelPayOffDate = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -55,7 +56,6 @@
             this.label9 = new System.Windows.Forms.Label();
             this.labelTotalInterest = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -151,6 +151,7 @@
             this.textBoxNumberOfMonths.Name = "textBoxNumberOfMonths";
             this.textBoxNumberOfMonths.Size = new System.Drawing.Size(106, 20);
             this.textBoxNumberOfMonths.TabIndex = 25;
+            this.textBoxNumberOfMonths.TextChanged += new System.EventHandler(this.textBoxNumberOfMonths_TextChanged);
             // 
             // textBoxDownPayment
             // 
@@ -199,7 +200,7 @@
             this.calculatorToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(334, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(317, 24);
             this.menuStrip1.TabIndex = 38;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -227,6 +228,13 @@
             this.referencesToolStripMenuItem.Size = new System.Drawing.Size(218, 22);
             this.referencesToolStripMenuItem.Text = "References";
             this.referencesToolStripMenuItem.Click += new System.EventHandler(this.referencesToolStripMenuItem_Click);
+            // 
+            // helpToolStripMenuItem
+            // 
+            this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(218, 22);
+            this.helpToolStripMenuItem.Text = "Help";
+            this.helpToolStripMenuItem.Click += new System.EventHandler(this.helpToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem3
             // 
@@ -301,18 +309,11 @@
             this.label11.TabIndex = 36;
             this.label11.Text = "Total Interest:";
             // 
-            // helpToolStripMenuItem
-            // 
-            this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(218, 22);
-            this.helpToolStripMenuItem.Text = "Help";
-            this.helpToolStripMenuItem.Click += new System.EventHandler(this.helpToolStripMenuItem_Click);
-            // 
             // MortgageCalculator2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(334, 281);
+            this.ClientSize = new System.Drawing.Size(317, 281);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.checkBoxPercentage);
             this.Controls.Add(this.label8);
@@ -339,6 +340,7 @@
             this.Name = "MortgageCalculator2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MortgageCalculator";
+            this.Load += new System.EventHandler(this.MortgageCalculator2_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

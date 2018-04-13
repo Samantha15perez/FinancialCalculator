@@ -110,7 +110,7 @@ namespace FinancialCalculator
             }
             catch
             {
-                MessageBox.Show("Please double-check your input. ");
+                MessageBox.Show("Please double-check that your input only contains numbers. ");
             }
         }
 
@@ -124,6 +124,20 @@ namespace FinancialCalculator
             FinancialCalculator.HelpCompoundCalculator HelpPage = new FinancialCalculator.HelpCompoundCalculator();
             //opens help page
             HelpPage.Show();
+        }
+
+        private void textBoxLengthOfTime_TextChanged(object sender, EventArgs e)
+        {
+            double Textboxcontents = double.Parse(textBoxLengthOfTime.Text.ToString());
+
+            if (Textboxcontents == 0)
+            {
+                MessageBox.Show("Cannot set time to 0 years");
+                textBoxLengthOfTime.Text = "";
+
+                //makes sure that the years cannot be set to zero.
+
+            }
         }
     }
 }

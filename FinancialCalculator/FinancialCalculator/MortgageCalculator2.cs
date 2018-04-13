@@ -75,7 +75,7 @@ namespace FinancialCalculator
             }
             catch
             {
-                MessageBox.Show("Please double-check your input. ");
+                MessageBox.Show("Please double-check that your input only contains numbers. ");
             }
         }
                
@@ -105,6 +105,24 @@ namespace FinancialCalculator
             FinancialCalculator.HelpMortgageCalculator form1 = new FinancialCalculator.HelpMortgageCalculator();
 
             form1.Show();
+        }
+
+        private void textBoxNumberOfMonths_TextChanged(object sender, EventArgs e)
+        {
+            double Textboxcontents = double.Parse(textBoxNumberOfMonths.Text.ToString());
+
+            if (Textboxcontents == 0)
+            {
+                MessageBox.Show("Cannot set time to 0 years");
+                textBoxNumberOfMonths.Text = "";
+
+
+            }
+        }
+
+        private void MortgageCalculator2_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
