@@ -52,6 +52,18 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="HelpCompoundCalculator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HelpCompoundCalculator.Designer.cs">
+      <DependentUpon>HelpCompoundCalculator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HelpMortgageCalculator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HelpMortgageCalculator.Designer.cs">
+      <DependentUpon>HelpMortgageCalculator.cs</DependentUpon>
+    </Compile>
     <Compile Include="MortgageCalculator2.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -60,8 +72,20 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReferenceSheet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReferenceSheet.Designer.cs">
+      <DependentUpon>ReferenceSheet.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HelpCompoundCalculator.resx">
+      <DependentUpon>HelpCompoundCalculator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HelpMortgageCalculator.resx">
+      <DependentUpon>HelpMortgageCalculator.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MortgageCalculator2.resx">
       <DependentUpon>MortgageCalculator2.cs</DependentUpon>
@@ -74,7 +98,11 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="ReferenceSheet.resx">
+      <DependentUpon>ReferenceSheet.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -89,10 +117,58 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\References\References.csproj">
-      <Project>{392d1414-6604-44b3-a8c1-a606f939d759}</Project>
-      <Name>References</Name>
-    </ProjectReference>
+    <None Include="Resources\CompoundInterestCalculatorScreenshot.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrowup.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DR.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UR.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RU.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RD.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\s curve.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DR1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MortgageCalculatorScreenshot.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\s curve 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UR1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\compound-interest-formula-diagram.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Wikihow Mortgage formula.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Wikihow Mortgage formula1.PNG" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

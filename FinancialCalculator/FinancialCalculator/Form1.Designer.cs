@@ -56,6 +56,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
+            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -75,6 +76,7 @@
             this.calculatorToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.exitToolStripMenuItem2,
             this.referencesToolStripMenuItem,
+            this.helpToolStripMenuItem,
             this.exitToolStripMenuItem3});
             this.calculatorToolStripMenuItem.Name = "calculatorToolStripMenuItem";
             this.calculatorToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
@@ -83,21 +85,21 @@
             // exitToolStripMenuItem2
             // 
             this.exitToolStripMenuItem2.Name = "exitToolStripMenuItem2";
-            this.exitToolStripMenuItem2.Size = new System.Drawing.Size(171, 22);
+            this.exitToolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
             this.exitToolStripMenuItem2.Text = "Mortgage Calculator";
             this.exitToolStripMenuItem2.Click += new System.EventHandler(this.exitToolStripMenuItem2_Click);
             // 
             // referencesToolStripMenuItem
             // 
             this.referencesToolStripMenuItem.Name = "referencesToolStripMenuItem";
-            this.referencesToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
+            this.referencesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.referencesToolStripMenuItem.Text = "References";
             this.referencesToolStripMenuItem.Click += new System.EventHandler(this.referencesToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem3
             // 
             this.exitToolStripMenuItem3.Name = "exitToolStripMenuItem3";
-            this.exitToolStripMenuItem3.Size = new System.Drawing.Size(171, 22);
+            this.exitToolStripMenuItem3.Size = new System.Drawing.Size(180, 22);
             this.exitToolStripMenuItem3.Text = "Exit";
             this.exitToolStripMenuItem3.Click += new System.EventHandler(this.exitToolStripMenuItem3_Click);
             // 
@@ -323,6 +325,13 @@
             this.label10.TabIndex = 10;
             this.label10.Text = "Yearly Additions";
             // 
+            // helpToolStripMenuItem
+            // 
+            this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.helpToolStripMenuItem.Text = "Help";
+            this.helpToolStripMenuItem.Click += new System.EventHandler(this.helpToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -347,7 +356,9 @@
             this.Controls.Add(this.textBoxInitialInvestment);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
+            this.MaximizeBox = false;
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Compound Interest Calculator";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
@@ -388,6 +399,7 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.RadioButton radioButtonQuarterly;
+        private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
     }
 }
 

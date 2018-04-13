@@ -57,5 +57,10 @@ namespace References
         {
             //this label contains an explanation to how the references for the mortgage calculation were used. 
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
